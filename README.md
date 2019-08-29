@@ -9,8 +9,21 @@ eXo-test
 require_once 'exo.test.php';
 
 $i = new Exo;
+
 $url = 'https://google.com/';
 echo $i->is_ok($url);
 //var_dump($i->is_ok($url, 'Каталог'));
+
+```
+
+проверка ответов всех страниц указанных в sitemap.xml
+```php
+<?php
+require 'exo.test.php';
+
+$i = new Exo;
+
+$sitemap = 'site.ru/sitemap.xml';
+$i->sitemap_teser($sitemap);
 
 ```
