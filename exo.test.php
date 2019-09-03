@@ -54,7 +54,7 @@ class Exo {
       $is_ok = 'Server No Answer';
     }
 
-    return $is_ok;
+    echo $is_ok;
 
 
   }
