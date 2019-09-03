@@ -24,6 +24,10 @@ require 'exo.test.php';
 $i = new Exo;
 
 $sitemap = 'site.ru/sitemap.xml';
+$limit = 200;
+
 $i->sitemap_teser($sitemap);
+
+//$i->sitemap_tester($sitemap,$limit);
 
 ```
