@@ -9,7 +9,7 @@
             "email": "loisoj@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
       "overvoidjs/exotest": "dev-master"
     },
