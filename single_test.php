@@ -1,9 +1,9 @@
 <?php
 
-require 'exo.test.php';
+require 'exo.php';
 
 $i = new Exo;
 
-$url = 'https://stommarket.ru/';
+$url = 'https://vk.com/';
 
-var_dump($i->is_ok($url, 'Каталог'));
+var_dump($i->is_ok($url, 'ВКонтакте для мобильных устройств'));

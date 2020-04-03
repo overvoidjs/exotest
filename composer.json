@@ -1,0 +1,22 @@
+{
+    "name": "overvoidjs/eXo-test",
+    "description": "Class to access tests, develop tests, autotest, acceptance test",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Overvoidjs",
+            "email": "loisoj@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+      "overvoidjs/imgun": "dev-master"
+    },
+    "autoload": {
+        "classmap": ["exo.php"],
+        "psr-0": {
+            "Overvoidjs": "namespaced/"
+        }
+    }
+}
