@@ -1,5 +1,5 @@
 {
-    "name": "overvoidjs/eXo-test",
+    "name": "overvoidjs/exotest",
     "description": "Class to access tests, develop tests, autotest, acceptance test",
     "type": "library",
     "license": "MIT",
