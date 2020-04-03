@@ -1,4 +1,4 @@
-eXo-test
+exotest
 
 Пример использования:
 
@@ -6,7 +6,7 @@ eXo-test
 приемочное тестирование(штучное) с проверкой контента:
 ```php
 <?php
-require_once 'exo.test.php';
+require_once 'exo.php';
 
 $i = new Exo;
 
