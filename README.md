@@ -3,7 +3,7 @@
 
 ### Установка:
 ```
-composer require overvoidjs/exotest
+composer require overvoidjs/exotest:dev-master
 ```
 
 ### Пример использования:
