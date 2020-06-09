@@ -21,11 +21,29 @@ $i = new Exo;
 
 $url = 'https://google.com/';
 //Проверка статуса ответа
-echo $i->is_ok($url);
+$i->is_ok($url);
 //Проверка статуса ответа и наличия в коде страницы блока
-echo $i->is_ok($url, '<span>Каталог</span>');
+$i->is_ok($url, '<span>Каталог</span>');
 
 ```
+
+отправка POST запроса по url и получение ответа:
+```php
+<?php
+
+$i = new Exo;
+
+$url = 'https://samesite.with/post/or/api';
+$param = [
+'param1'=>'param1_data',
+'param2'=>'param2_data'
+];
+
+//Можно положить в переменную, вернет ответ POSTa
+$i->post_it($url,$param);
+
+```
+
 
 проверка ответов всех страниц указанных в sitemap.xml
 ```php
