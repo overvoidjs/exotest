@@ -17,6 +17,21 @@ class Exo {
     return $r;
   }
 
+  //отправка POST с параметрами по адрессу
+  public function post_it($url, $params){
+
+    $result = file_get_contents($url, false, stream_context_create(array(
+          'http' => array(
+              'method'  => 'POST',
+              'header'  => 'Content-type: application/x-www-form-urlencoded',
+              'content' => http_build_query($params)
+          )
+      )));
+
+      echo $result;
+  }
+
+
   //Поштучное приемочное тестирование
   public function is_ok($url , $testString = NULL){
 
