@@ -1,12 +1,12 @@
 # eXo by We::Dev
 ## Система приемочного тестирования
 
-###Установка:
+### Установка:
 ```
 composer require overvoidjs/exotest
 ```
 
-###Пример использования:
+### Пример использования:
 
 ```
 include_once 'vendor/autoload.php';
