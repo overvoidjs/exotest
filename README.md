@@ -1,4 +1,4 @@
-# eXo by We::Dev
+# eXo::Test by We::Dev
 ## Testing System
 
 ### Установка:
