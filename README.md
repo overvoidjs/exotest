@@ -1,12 +1,21 @@
-# exotest - Класс для тестирования url путей
+# eXo by We::Dev
+## Система приемочного тестирования
 
-Пример использования:
+###Установка:
+```
+composer require overvoidjs/exotest
+```
 
+###Пример использования:
+
+```
+include_once 'vendor/autoload.php';
+
+```
 
 приемочное тестирование(штучное) с проверкой контента:
 ```php
 <?php
-require_once 'exo.php';
 
 $i = new Exo;
 
@@ -21,7 +30,6 @@ echo $i->is_ok($url, '<span>Каталог</span>');
 проверка ответов всех страниц указанных в sitemap.xml
 ```php
 <?php
-require 'exo.test.php';
 
 $i = new Exo;
 
