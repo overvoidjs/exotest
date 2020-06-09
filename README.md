@@ -11,8 +11,10 @@ require_once 'exo.php';
 $i = new Exo;
 
 $url = 'https://google.com/';
+//Проверка статуса ответа
 echo $i->is_ok($url);
-//var_dump($i->is_ok($url, 'Каталог'));
+//Проверка статуса ответа и наличия в коде страницы блока
+echo $i->is_ok($url, '<span>Каталог</span>');
 
 ```
 
