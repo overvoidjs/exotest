@@ -69,7 +69,7 @@ class Exo {
           $is_ok = $url." .... \033[01;31m FAIL with code " .$answ." \033[0m \n";
         }
     } else {
-      $is_ok = 'Server No Answer';
+      $is_ok = "\033[01;31m Server No Answer \033[0m \n";
     }
 
     echo $is_ok;
