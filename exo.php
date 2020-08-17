@@ -58,15 +58,15 @@ class Exo {
 
           $html_to_test = file_get_contents($url);
           if(strpos(file_get_contents($url),$testString)){
-            $is_ok = $url . "  ....  Ok\n";
+            $is_ok = $url . "  .... \033[32m Ok\033[0m \n";
           } else {
-            $is_ok = $url . "  ....  Ok. But ContentTest .... FAIL \n";
+            $is_ok = $url . "  .... \033[32m Ok\033[0m. But ContentTest .... \033[01;31m FAIL \033[0m \n";
           }
 
         }
           //Ответ оке
         } else {
-          $is_ok = $url." .... FAIL with code " .$answ."\n";
+          $is_ok = $url." .... \033[01;31m FAIL with code " .$answ." \033[0m \n";
         }
     } else {
       $is_ok = 'Server No Answer';
