@@ -4,6 +4,6 @@ require 'exo.php';
 
 $i = new Exo;
 
-$url = 'https://vk.com/';
+$url = 'http://localhost:7888/catalog/instrumentyi/';
 
-var_dump($i->is_ok($url, 'ВКонтакте для мобильных устройств'));
+$i->is_ok($url,'<div class="product-card-name">');
