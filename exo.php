@@ -20,7 +20,6 @@ class Exo {
   //отправка POST с параметрами по адрессу
   public function post_it($url, $data){
 
-    // use key 'http' even if you send the request to https://...
     $options = array(
         'http' => array(
             'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
@@ -32,6 +31,20 @@ class Exo {
     $result = file_get_contents($url, false, $context);
 
     return $result;
+  }
+
+
+  //отправка файла
+  public function post_it_file($url, $data, $pathname, $pathfile){
+    $data[$pathname] = curl_file_create($pathfile);
+
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $data = curl_exec($ch);
+
+    return $data;
   }
 
 
