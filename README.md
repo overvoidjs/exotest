@@ -1,36 +1,30 @@
-# eXo::Test by We::Dev
-## Testing System
+![eXo Test](logo.png "eXo Test")
 
-### Установка:
-```
-composer require overvoidjs/exotest:dev-master
-```
+------------
 
-### Пример использования:
+## Install
+`composer require overvoidjs/exotest:dev-master`
+## Examples
+- **include**:
 
-```
-include_once 'vendor/autoload.php';
+``` php
+<?php include_once 'vendor/autoload.php';```
 
-```
+- **Test server code and content on response**
 
-приемочное тестирование(штучное) с проверкой контента:
 ```php
-<?php
-
 $i = new Exo;
 
 $url = 'https://google.com/';
-//Проверка статуса ответа
+//Testing code only
 $i->is_ok($url);
-//Проверка статуса ответа и наличия в коде страницы блока
+//Testing code and content response
 $i->is_ok($url, '<span>Каталог</span>');
-
 ```
 
-отправка POST запроса по url и получение ответа:
-```php
-<?php
+- **Send POST with params**
 
+```php
 $i = new Exo;
 
 $url = 'https://samesite.with/post/or/api';
@@ -39,16 +33,32 @@ $param = [
 'param2'=>'param2_data'
 ];
 
-//Можно положить в переменную, вернет ответ POSTa
-$i->post_it($url,$param);
+$test = $i->post_it($url,$param);
+```
 
+- **Send POST with params and file**
+
+```php
+$i = new Exo;
+
+$url = 'https://vk.com/';
+
+$payload = [
+  'data'=>'data'
+];
+
+$post_file_name = 'new_img';
+$post_file_path = './new_img.jpg';
+
+$test = $i->post_it_file($url,$payload,$post_file_name,$post_file_path);
 ```
 
 
-проверка ответов всех страниц указанных в sitemap.xml
-```php
-<?php
+------------
 
+- **[InWork] - test all pages in sitemap**
+
+```php
 $i = new Exo;
 
 $sitemap = 'site.ru/sitemap.xml';
@@ -57,5 +67,4 @@ $limit = 200;
 $i->sitemap_teser($sitemap);
 
 //$i->sitemap_tester($sitemap,$limit);
-
 ```
